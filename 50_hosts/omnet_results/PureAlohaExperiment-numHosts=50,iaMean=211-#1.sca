@@ -1,0 +1,74 @@
+version 2
+run PureAlohaExperiment-75-20210531-16:23:37-5338
+attr configname PureAlohaExperiment
+attr datetime 20210531-16:23:37
+attr experiment PureAlohaExperiment
+attr inifile omnetpp.ini
+attr iterationvars "$numHosts=50, $iaMean=211"
+attr iterationvarsf numHosts=50,iaMean=211-
+attr measurement "$numHosts=50, $iaMean=211"
+attr network Aloha
+attr processid 5338
+attr repetition 1
+attr replication #1
+attr resultdir results
+attr runnumber 75
+attr seedset 75
+itervar iaMean 211
+itervar numHosts 50
+param Aloha.numHosts 50
+param Aloha.host[*].iaTime exponential(211s)
+param Aloha.numHosts 50
+param Aloha.slotTime 0s
+param Aloha.txRate 9.6kbps
+param Aloha.host[*].pkLenBits 952b
+param **.x "uniform(0m, 1000m)"
+param **.y "uniform(0m, 1000m)"
+param **.animationHoldTimeOnCollision 0s
+param **.idleAnimationSpeed 1
+param **.transmissionEdgeAnimationSpeed 1e-6
+param **.midTransmissionAnimationSpeed 1e-1
+
+scalar Aloha.server duration 180
+statistic Aloha.server collisionLength:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr title "collision length, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Aloha.server collisionLength:mean -nan
+attr title "collision length, mean"
+scalar Aloha.server collisionLength:sum 0
+attr title "collision length, sum"
+scalar Aloha.server collisionLength:max -nan
+attr title "collision length, max"
+statistic Aloha.server collisionMultiplicity:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source collision
+attr title "collision multiplicity, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Aloha.server collidedFrames:last nan
+attr source sum(collision)
+attr title "collided frames, last"
+scalar Aloha.server channelUtilization:last 0.024270181568803
+attr interpolationmode linear
+attr source timeavg(receive)
+attr title "channel utilization, last"
+scalar Aloha.server receivedFrames:last 44
+attr source sum(receive)
+attr title "received frames, last"
+

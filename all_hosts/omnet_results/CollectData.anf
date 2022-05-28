@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scave:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:scave="http://www.omnetpp.org/omnetpp/scave">
+  <inputs>
+    <inputs name="/aloha/results/SlottedAloha1-#0.sca"/>
+    <inputs name="/aloha/results/SlottedAloha1-#0.vec"/>
+    <inputs name="/aloha/results/PureAlohaExperiment-numHosts=20,iaMean=9-#1.sca"/>
+    <inputs name="/aloha/results/PureAlohaExperiment-numHosts=20,iaMean=9-#1.vec"/>
+    <inputs name="/aloha/results/PureAlohaExperiment-numHosts=10,iaMean=1-#0.sca"/>
+    <inputs name="/aloha/results/PureAlohaExperiment-numHosts=10,iaMean=1-#0.vec"/>
+    <inputs name="/aloha/results/PureAloha2-#0.sca"/>
+    <inputs name="/aloha/results/PureAloha2-#0.vec"/>
+    <inputs name="/aloha/results/SlottedAloha2-#0.sca"/>
+    <inputs name="/aloha/results/SlottedAloha2-#0.vec"/>
+  </inputs>
+  <datasets/>
+  <chartSheets/>
+</scave:Analysis>

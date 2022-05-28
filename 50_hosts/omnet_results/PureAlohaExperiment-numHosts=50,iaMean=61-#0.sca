@@ -1,0 +1,139 @@
+version 2
+run PureAlohaExperiment-64-20210531-16:15:11-5386
+attr configname PureAlohaExperiment
+attr datetime 20210531-16:15:11
+attr experiment PureAlohaExperiment
+attr inifile omnetpp.ini
+attr iterationvars "$numHosts=50, $iaMean=61"
+attr iterationvarsf numHosts=50,iaMean=61-
+attr measurement "$numHosts=50, $iaMean=61"
+attr network Aloha
+attr processid 5386
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 64
+attr seedset 64
+itervar iaMean 61
+itervar numHosts 50
+param Aloha.numHosts 50
+param Aloha.host[*].iaTime exponential(61s)
+param Aloha.numHosts 50
+param Aloha.slotTime 0s
+param Aloha.txRate 9.6kbps
+param Aloha.host[*].pkLenBits 952b
+param **.x "uniform(0m, 1000m)"
+param **.y "uniform(0m, 1000m)"
+param **.animationHoldTimeOnCollision 0s
+param **.idleAnimationSpeed 1
+param **.transmissionEdgeAnimationSpeed 1e-6
+param **.midTransmissionAnimationSpeed 1e-1
+
+scalar Aloha.server duration 180
+statistic Aloha.server collisionLength:histogram
+field count 8
+field mean 0.14863151331013
+field stddev 0.040095165872563
+field min 0.108573884613
+field max 0.194294462169
+field sum 1.189052106481
+field sqrsum 0.1879839702753
+attr title "collision length, histogram"
+bin	-inf	0
+bin	0.086	0
+bin	0.088	0
+bin	0.09	0
+bin	0.092	0
+bin	0.094	0
+bin	0.096	0
+bin	0.098	0
+bin	0.1	0
+bin	0.102	0
+bin	0.104	0
+bin	0.106	0
+bin	0.108	1
+bin	0.11	2
+bin	0.112	0
+bin	0.114	1
+bin	0.116	0
+bin	0.118	0
+bin	0.12	0
+bin	0.122	0
+bin	0.124	0
+bin	0.126	0
+bin	0.128	0
+bin	0.13	0
+bin	0.132	0
+bin	0.134	0
+bin	0.136	0
+bin	0.138	0
+bin	0.14	0
+bin	0.142	0
+bin	0.144	0
+bin	0.146	0
+bin	0.148	0
+bin	0.15	0
+bin	0.152	0
+bin	0.154	0
+bin	0.156	0
+bin	0.158	0
+bin	0.16	0
+bin	0.162	0
+bin	0.164	0
+bin	0.166	0
+bin	0.168	0
+bin	0.17	0
+bin	0.172	0
+bin	0.174	0
+bin	0.176	0
+bin	0.178	0
+bin	0.18	2
+bin	0.182	0
+bin	0.184	1
+bin	0.186	0
+bin	0.188	0
+bin	0.19	0
+bin	0.192	0
+bin	0.194	1
+bin	0.196	0
+bin	0.198	0
+bin	0.2	0
+bin	0.202	0
+bin	0.204	0
+bin	0.206	0
+bin	0.208	0
+bin	0.21	0
+bin	0.212	0
+bin	0.214	0
+bin	0.216	0
+scalar Aloha.server collisionLength:mean 0.14863151331013
+attr title "collision length, mean"
+scalar Aloha.server collisionLength:sum 1.189052106481
+attr title "collision length, sum"
+scalar Aloha.server collisionLength:max 0.194294462169
+attr title "collision length, max"
+statistic Aloha.server collisionMultiplicity:histogram
+field count 8
+field mean 2
+field stddev 0
+field min 2
+field max 2
+field sum 16
+field sqrsum 32
+attr source collision
+attr title "collision multiplicity, histogram"
+bin	-inf	0
+bin	1	0
+bin	2	8
+bin	3	0
+scalar Aloha.server collidedFrames:last 16
+attr source sum(collision)
+attr title "collided frames, last"
+scalar Aloha.server channelUtilization:last 0.076596146392628
+attr interpolationmode linear
+attr source timeavg(receive)
+attr title "channel utilization, last"
+scalar Aloha.server receivedFrames:last 139
+attr source sum(receive)
+attr title "received frames, last"
+
